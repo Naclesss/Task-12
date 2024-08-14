@@ -1,7 +1,6 @@
 * {
   font-family: "Poppins", sans-serif;
 }
-
 .header {
   margin: 10px 50px;
 }
@@ -24,12 +23,6 @@ img {
   justify-content: center;
   height: 100%;
   color: white;
-  z-index: 1;
-}
-@media (max-width: 630px) {
-  .carousel-caption h5 {
-    font-size: 45px !important;
-  }
 }
 .hero .carousel-caption h5,
 .carousel-caption p {
@@ -45,7 +38,9 @@ img {
   letter-spacing: 0.6px;
   color: rgba(255, 255, 255, 0.8);
 }
-
+.carousel-inner {
+  position: absolute;
+}
 .carousel-item::before {
   content: "";
   position: absolute;
@@ -55,7 +50,6 @@ img {
   height: 100%;
   background-color: rgba(5, 44, 67, 1);
   opacity: 0.5;
-  z-index: 1;
 }
 .carousel-indicators button {
   width: 8px !important;
@@ -66,7 +60,6 @@ img {
   margin: 0 4px !important;
   transition: background-color 0.3s ease;
 }
-
 .carousel-indicators button.active {
   background-color: #4f86f9;
 }
@@ -91,7 +84,6 @@ img {
 ul li a:hover {
   color: #4f86f9 !important;
 }
-
 .card-caption {
   display: flex;
   flex-direction: column;
@@ -99,52 +91,27 @@ ul li a:hover {
 
   height: 45vh;
 }
-.card-caption  span {
+.card-caption span {
   margin-bottom: 5px;
 }
-.card-caption h2, .card-caption p {
+.card-caption h2,
+.card-caption p {
   margin-bottom: 24px;
 }
-.card-caption p,.card-caption span {
-    color: #8c8c8c;
+.card-caption p,
+.card-caption span {
+  color: #8c8c8c;
 }
-
 .button {
   display: flex;
-}
-
-@media (min-width: 300px) and (max-width: 910px) {
-  .card-caption {
-    margin: 80px 0px;
-  }
 }
 .card {
   border: none;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  
 }
 .cards {
   background-color: #f9faff;
 }
-
-
-
-@media (min-width: 706px) {
-  .card {
-    height: 50vh;
-  }
-}
-@media (max-width:706px) {
-  .card {
-    height: 38vh;
-  }
-}
-@media (min-width: 991px) {
-  .card-caption {
-    height: calc(100vh + 16px);
-  }
-}
-
 .card i {
   font-size: 30px;
   display: flex;
@@ -156,7 +123,6 @@ ul li a:hover {
   width: 60px;
   height: 60px;
 }
-
 .card {
   display: flex;
   flex-direction: column;
@@ -167,5 +133,30 @@ ul li a:hover {
 }
 .card:hover {
   background-color: #4f86f9;
-  color: white;
+  color: white !important;
+}
+@media (max-width: 630px) {
+  .carousel-caption h5 {
+    font-size: 45px !important;
+  }
+}
+@media (min-width: 300px) and (max-width: 910px) {
+  .card-caption {
+    margin: 80px 0px;
+  }
+}
+@media (min-width: 706px) {
+  .card {
+    height: 50vh;
+  }
+}
+@media (max-width: 706px) {
+  .card {
+    height: 38vh;
+  }
+}
+@media (min-width: 991px) {
+  .card-caption {
+    height: calc(100vh + 16px);
+  }
 }
